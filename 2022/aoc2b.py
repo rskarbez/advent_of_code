@@ -7,6 +7,8 @@ def read_input(infile='aoc2_input.txt'):
     return moves_list
 
 def score_move(you, outcome):
+    # All we need to change is the score_move function
+    # So let's do that
     innate_score = 0
     outcome_score = 0
     match outcome:

@@ -1,7 +1,12 @@
 def read_input(infile='aoc2_input.txt'):
+    # Separated input reading into its own function (with default arg)
+    # Will maintain this pattern for future solutions
     moves_list = []
     with open(infile) as f:
         for line in f:
+            # Tuple unpacking
+            # Note, if there were more or fewer than 2 strings,
+            # we'd get an exception
             (you, me) = line.strip().split()
             moves_list.append((you, me))
     return moves_list
