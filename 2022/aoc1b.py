@@ -13,18 +13,16 @@ if __name__ == '__main__':
                 running_calories = 0
                 num_elves += 1
                 continue
-                #print('New elf!')
             running_calories += int(temp_line)
-            #print(temp_line)
             num_lines += 1
-        #print('New elf!')
         calories_list.append(running_calories)
         num_elves += 1
         print(num_lines)
         print(num_elves)
         print(max(calories_list))
-        print(calories_list)
+        # ^^^ Up to here, everything is the same as aoc1a.py
+        # Need the total calories from the top three elves
+        # Solution: Sort the list in ascending order, and take the last 3
         sorted_calories_list = sorted(calories_list)
-        print(sorted_calories_list)
         print(sorted_calories_list[num_elves-3:num_elves])
         print(sum(sorted_calories_list[num_elves-3:num_elves]))
