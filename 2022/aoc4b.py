@@ -11,6 +11,8 @@ if __name__ == '__main__':
     elf_pairs = read_input()
     partial_contains = 0
     for (elf1, elf2) in elf_pairs:
+        # I should really have extracted this logic into a function,
+        # or functions. Oh well. An exercise for the reader
         (elf1begin, elf1end) = elf1.split('-')
         (elf2begin, elf2end) = elf2.split('-')
         e1b = int(elf1begin)
